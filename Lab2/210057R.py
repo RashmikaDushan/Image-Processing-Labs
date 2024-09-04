@@ -80,15 +80,15 @@ imageB = apply_filter(with_padding, filterB)
 imageC = apply_filter(with_padding, filterC)
 imageD = apply_filter(with_padding, filterD)
 
-cv2.imwrite("Lab2/filtered.jpg", imageA) # Saving the images
-cv2.imwrite("Lab2/filtered2.jpg", imageB)
-cv2.imwrite("Lab2/filtered3.jpg", imageC)
-cv2.imwrite("Lab2/filtered4.jpg", imageD)
+cv2.imwrite("Lab2/filterA.jpg", imageA) # Saving the images
+cv2.imwrite("Lab2/filterB.jpg", imageB)
+cv2.imwrite("Lab2/filterC.jpg", imageC)
+cv2.imwrite("Lab2/filterD.jpg", imageD)
 
 def rms(original, filtered): # Calculating the RMS value
     return np.sqrt(np.mean((original - filtered) ** 2))
 
-print("RMS 1:",rms(original, imageA)) # Printing the RMS values
-print("RMS 2:",rms(original, imageB))
-print("RMS 3:",rms(original, imageC))
-print("RMS 4:",rms(original, imageD))
+print("RMS A:",rms(original, imageA)) # Printing the RMS values
+print("RMS B:",rms(original, imageB))
+print("RMS C:",rms(original, imageC))
+print("RMS D:",rms(original, imageD))
