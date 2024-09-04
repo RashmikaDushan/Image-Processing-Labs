@@ -32,7 +32,7 @@ axes[1,0].imshow(low_contrast, cmap='gray',vmin=0, vmax=255)
 axes[1,0].set_title('Low Contrast')
 
 
-low_depth = gray_8 // 4 * 4
+low_depth = gray_8 // 16 * 16
 low_depth = low_depth.astype(np.uint8)
 axes[1,1].imshow(low_depth, cmap='gray',vmin=0, vmax=255)
 axes[1,1].set_title('4bpp')
